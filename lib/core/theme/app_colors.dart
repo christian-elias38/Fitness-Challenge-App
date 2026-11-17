@@ -48,3 +48,4 @@ class AppColors {
   static const Color categoryBeginner = Color(0xFFF59E0B);
   static const Color categoryCardio = Color(0xFFEC4899);
 }
+
