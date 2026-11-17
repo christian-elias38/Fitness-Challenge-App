@@ -208,3 +208,4 @@ class AppErrorView extends StatelessWidget {
     );
   }
 }
+
