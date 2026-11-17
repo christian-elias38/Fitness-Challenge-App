@@ -48,7 +48,8 @@ class AppTheme {
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: AppColors.darkCard,
-        contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+        contentPadding:
+            const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
         hintStyle: GoogleFonts.plusJakartaSans(
           color: AppColors.darkTextMuted,
           fontSize: 14,
@@ -63,7 +64,8 @@ class AppTheme {
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16),
-          borderSide: const BorderSide(color: AppColors.primaryNeon, width: 1.5),
+          borderSide:
+              const BorderSide(color: AppColors.primaryNeon, width: 1.5),
         ),
       ),
       dividerTheme: const DividerThemeData(
@@ -118,7 +120,8 @@ class AppTheme {
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: AppColors.lightSurface,
-        contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+        contentPadding:
+            const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
         hintStyle: GoogleFonts.plusJakartaSans(
           color: AppColors.lightTextMuted,
           fontSize: 14,
@@ -133,7 +136,8 @@ class AppTheme {
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16),
-          borderSide: const BorderSide(color: AppColors.primaryNeonDark, width: 1.5),
+          borderSide:
+              const BorderSide(color: AppColors.primaryNeonDark, width: 1.5),
         ),
       ),
       dividerTheme: const DividerThemeData(
