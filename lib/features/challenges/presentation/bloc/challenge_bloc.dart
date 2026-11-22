@@ -11,6 +11,8 @@ class ChallengeBloc extends Bloc<ChallengeEvent, ChallengeState> {
     on<AddChallenge>(_onAddChallenge);
     on<UpdateChallenge>(_onUpdateChallenge);
     on<DeleteChallenge>(_onDeleteChallenge);
+    on<ToggleJoinChallenge>(_onToggleJoinChallenge);
+    on<AdvanceChallengeProgress>(_onAdvanceChallengeProgress);
   }
 
   Future<void> _onFetchChallenges(
@@ -61,6 +63,32 @@ class ChallengeBloc extends Bloc<ChallengeEvent, ChallengeState> {
     emit(ChallengeLoading());
     try {
       await _repository.deleteChallenge(event.id);
+      final challenges = await _repository.fetchChallenges();
+      emit(ChallengeLoaded(challenges));
+    } catch (e) {
+      emit(ChallengeError(e.toString()));
+    }
+  }
+
+  Future<void> _onToggleJoinChallenge(
+    ToggleJoinChallenge event,
+    Emitter<ChallengeState> emit,
+  ) async {
+    try {
+      await _repository.toggleJoinChallenge(event.id);
+      final challenges = await _repository.fetchChallenges();
+      emit(ChallengeLoaded(challenges));
+    } catch (e) {
+      emit(ChallengeError(e.toString()));
+    }
+  }
+
+  Future<void> _onAdvanceChallengeProgress(
+    AdvanceChallengeProgress event,
+    Emitter<ChallengeState> emit,
+  ) async {
+    try {
+      await _repository.advanceProgress(event.id);
       final challenges = await _repository.fetchChallenges();
       emit(ChallengeLoaded(challenges));
     } catch (e) {
