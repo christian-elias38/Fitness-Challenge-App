@@ -31,3 +31,19 @@ class DeleteChallenge extends ChallengeEvent {
   @override
   List<Object?> get props => [id];
 }
+
+class ToggleJoinChallenge extends ChallengeEvent {
+  final String id;
+  ToggleJoinChallenge(this.id);
+
+  @override
+  List<Object?> get props => [id];
+}
+
+class AdvanceChallengeProgress extends ChallengeEvent {
+  final String id;
+  AdvanceChallengeProgress(this.id);
+
+  @override
+  List<Object?> get props => [id];
+}
